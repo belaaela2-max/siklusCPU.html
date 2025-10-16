@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siklus Instruksi CPU - Isabela Ela</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffe6f9, #f4e1ff, #f9f1ff);
+      color: #4a2e63;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    header {
+      background: linear-gradient(90deg, #f9c5d1, #eab8ff, #d1a6ff);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom-left-radius: 50% 15%;
+      border-bottom-right-radius: 50% 15%;
+      animation: slideDown 1.5s ease;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header p {
+      margin: 10px 0 0;
+      font-style: italic;
+      font-size: 1.1em;
+    }
+
+    section {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      margin: 40px auto;
+      padding: 30px;
+      width: 80%;
+      max-width: 900px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      animation: fadeUp 1.5s ease;
+    }
+
+    h2 {
+      color: #7b2cbf;
+      border-bottom: 3px solid #f7b9ff;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      line-height: 1.8;
+      list-style-type: square;
+    }
+
+    .tabel-container {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      animation: fadeUp 2s ease;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #e3c9ff;
+    }
+
+    th {
+      background-color: #e8bdfd;
+      color: white;
+    }
+
+    td {
+      background-color: #fef6ff;
+    }
+
+    footer {
+      text-align: center;
+      background: linear-gradient(90deg, #f9c5d1, #eab8ff, #d1a6ff);
+      color: white;
+      padding: 15px;
+      border-top-left-radius: 50% 15%;
+      border-top-right-radius: 50% 15%;
+      margin-top: 50px;
+      animation: slideUp 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); }
+      to { transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+
+    .highlight {
+      color: #d63384;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Siklus Instruksi CPU</h1>
+    <p>Disusun oleh <b>Isabela Ela</b></p>
+  </header>
+
+  <section>
+    <h2>🧠 Apa itu Siklus Instruksi CPU?</h2>
+    <p><span class="highlight">Siklus instruksi CPU</span> adalah proses berulang yang dilakukan oleh prosesor untuk menjalankan satu perintah dari program. CPU bekerja dengan sangat cepat, melakukan jutaan siklus setiap detik agar komputer bisa berfungsi dengan baik.</p>
+  </section>
+
+  <section>
+    <h2>⚙️ Tahapan Siklus Instruksi</h2>
+    <ul>
+      <li><b>1. Fetch (Mengambil Perintah):</b> CPU mengambil perintah dari memori untuk diproses.</li>
+      <li><b>2. Decode (Menerjemahkan Perintah):</b> CPU memahami makna dari perintah tersebut.</li>
+      <li><b>3. Execute (Menjalankan Perintah):</b> CPU menjalankan perintah, seperti menghitung atau memindahkan data.</li>
+      <li><b>4. Store (Menyimpan Hasil):</b> Hasil dari proses disimpan ke dalam memori.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🔁 Alur Kerja CPU</h2>
+    <p>Berikut alur kerja CPU secara sederhana:</p>
+    <pre style="background:#fde7ff; padding:15px; border-radius:10px; text-align:center;">
+Fetch → Decode → Execute → Store → Ulangi lagi
+    </pre>
+  </section>
+
+  <section>
+    <h2>💡 Contoh Sederhana</h2>
+    <p>Misalnya perintah program: <code>A = 5 + 3</code></p>
+    <ul>
+      <li><b>Fetch:</b> CPU mengambil perintah “A = 5 + 3”.</li>
+      <li><b>Decode:</b> CPU mengenali bahwa itu perintah penjumlahan.</li>
+      <li><b>Execute:</b> CPU menjumlahkan 5 + 3 = 8.</li>
+      <li><b>Store:</b> CPU menyimpan hasilnya (8) ke variabel A.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>📊 Ringkasan Siklus Instruksi</h2>
+    <div class="tabel-container">
+      <table>
+        <tr>
+          <th>Tahap</th>
+          <th>Nama</th>
+          <th>Tugas</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Fetch</td>
+          <td>Mengambil perintah dari memori</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Decode</td>
+          <td>Menerjemahkan perintah</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Execute</td>
+          <td>Menjalankan perintah</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Store</td>
+          <td>Menyimpan hasil proses</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>© 2025 Isabela Ela</b> | Desain cantik dengan nuansa pink, putih, dan ungu muda 💖</p>
+  </footer>
+</body>
+</html>
